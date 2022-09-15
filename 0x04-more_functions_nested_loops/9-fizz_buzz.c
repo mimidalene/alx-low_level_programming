@@ -1,45 +1,46 @@
-#include "main.h"
 #include <stdio.h>
 
 /**
-*main - program that prints either number
-*or fizz or buzz or fizzBuzz
-*
-*
-*Return: returns 0
-*/
+  *main - prints the fizz buzz test
+  *Return: should return a 0 value
+  *
+  */
 
 int main(void)
 {
-	int num = 1;
+	int i;
 
-	while (num++ < 100)
+	for (i = 1; i <= 100; i++)
 	{
-		if ((num % 3 == 0) && (num % 5 == 0))
+		if (i % 5 == 0 && i % 3 == 0)
 		{
-			printf("FizzBuzz ");
+			printf(" FizzBuzz");
 		}
-		else if ((num % 3) == 0)
+		else if (i % 5 == 0 && i % 3 != 0)
 		{
-			printf("Fizz ");
+			printf(" Buzz");
 		}
-		else if ((num % 5) == 0)
+		else if (i % 3 == 0 && i % 5 != 0)
 		{
-			if (num != 100)
-			{
-				printf("Buzz ");
-			}
-			else
-			{
-				printf("Buzz");
-			}
+			printf(" Fizz");
+		}
+		else if (i == 1)
+		{
+			printf("%d", i);
 		}
 		else
 		{
-			printf("%d ", num);
+			printf(" %d", i);
 		}
 	}
+
 	printf("\n");
 
 	return (0);
 }
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+
