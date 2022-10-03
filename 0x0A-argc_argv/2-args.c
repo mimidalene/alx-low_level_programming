@@ -1,13 +1,13 @@
 #include <stdio.h>
+
 /**
- * main - Entry point
- *
- * @argc: number of arguments
- * @argv: vector of strings of arguments
- *
- * Return: Always 0 (Success)
- *
- */
+  * main - entry point into code
+  *@argc: argument count
+  *@argv: vector of strings to arguments to be passed
+  *Return: 0
+  *
+  */
+
 int main(int argc, char *argv[])
 {
 	int i;
@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	(void)argv;
 
 	for (i = 0; i < argc; i++)
-		printf("s\n", argv[i]);
+		printf("%s\n", argv[i]);
 
 	return (0);
 }
