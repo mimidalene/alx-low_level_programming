@@ -1,37 +1,24 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits.h>
 /**
- * *create_array - function that create an array
+ * *malloc_checked - Function that allocates memory
  *
- * @size: parameter with the size of the array
- * @c: element of the array
+ * @b: parameter
  *
- * Return: Return the value
+ * Return: Return the printer
  */
-char *create_array(unsigned int size, char c)
+void *malloc_checked(unsigned int b)
 {
 	char *a;
-	unsigned int i = 0;
 
-	a = malloc(sizeof(char) * size);
+	a = malloc(sizeof(char) * b);
 
-	if (size == 0)
+	if (a == NULL)
 	{
-		return (0);
-	}
-	else if (a == NULL)
-	{
-		return (0);
-	}
-	else
-	{
-		while (i < size)
-		{
-			a[i] = c;
-			i++;
-		}
-		return (a);
+		exit(98);
 	}
 
-	return (0);
+	return (a);
 }
